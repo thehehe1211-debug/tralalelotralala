@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found – Ten Years Away</title>
+<link rel="stylesheet" href="/css/style.css" onerror="this.remove()">
+<style>
+  html,body{height:100%;margin:0;background:#0b1633;color:#bcd0ff;font-family:Arial,sans-serif}
+  main{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;text-align:center}
+  a{color:inherit;text-transform:uppercase;letter-spacing:.08em}
+</style>
+</head>
+<body>
+<main>
+  <h1>404</h1>
+  <p>This page isn’t part of this copy of the site.</p>
+  <a id="home" href="/">Back to home</a>
+</main>
+<script>
+  // Works on user sites (/) and GitHub Pages project sites (/repo/)
+  var seg = location.hostname.endsWith("github.io") ? location.pathname.split("/")[1] : "";
+  document.getElementById("home").href = seg ? "/" + seg + "/" : "/";
+</script>
+</body>
+</html>
